@@ -5,13 +5,13 @@ public class SeresVivos {
     protected String nombre;
     protected String grupoS;
     protected String sexo;
-    protected int altura;
-    protected int peso;
+    protected double altura;
+    protected double peso;
 
     public SeresVivos() {
     }
 
-    public SeresVivos(String nombre, String grupoS, String sexo, int altura, int peso) {
+    public SeresVivos(String nombre, String grupoS, String sexo, double altura, double peso) {
         this.nombre = nombre;
         this.grupoS = grupoS;
         this.sexo = sexo;
@@ -43,19 +43,19 @@ public class SeresVivos {
         this.sexo = sexo;
     }
 
-    public int getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(int altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
