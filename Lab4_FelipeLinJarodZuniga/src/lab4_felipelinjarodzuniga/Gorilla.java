@@ -33,4 +33,11 @@ public class Gorilla extends Primates {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Gorilla{" + "IQ=" + IQ + '}';
+    }
+    
+    
+
 }
