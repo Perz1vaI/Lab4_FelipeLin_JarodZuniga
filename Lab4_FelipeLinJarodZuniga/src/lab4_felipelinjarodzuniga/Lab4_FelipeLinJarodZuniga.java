@@ -140,6 +140,13 @@ public class Lab4_FelipeLinJarodZuniga {
                                                         for (SeresVivos p : primates) {
                                                             System.out.println("Posicion " + primates.indexOf(p) + " " + p);
                                                         }
+                                                        for (int i = 0; i < cant_prim; i++) {
+                                                            System.out.println("Ingrese la posicion del primate: ");
+                                                            int pos = sc.nextInt();
+
+                                                            helicoptero.get(cont_heli).getPrimates().add(primates.get(pos));
+                                                            primates.remove(pos);
+                                                        }
                                                         System.out.println("Ingrese que tipo de Gasolina tiene: 1. Super 2. Regular 3. diesel");
                                                         String tipogas = sc.next();
                                                         System.out.println("Ingrese el pais de partida: ");
@@ -168,6 +175,13 @@ public class Lab4_FelipeLinJarodZuniga {
                                                         int cant_prim = sc.nextInt();
                                                         for (SeresVivos p : primates) {
                                                             System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                                        }
+                                                        for (int i = 0; i < cant_prim; i++) {
+                                                            System.out.println("Ingrese la posicion del primate: ");
+                                                            int pos = sc.nextInt();
+
+                                                            avion.get(cont_avion).getPrimates().add(primates.get(pos));
+                                                            primates.remove(pos);
                                                         }
                                                         System.out.println("Ingrese que tipo de Gasolina tiene: 1. Super 2. Regular 3. diesel");
                                                         String tipogas = sc.next();
@@ -215,6 +229,13 @@ public class Lab4_FelipeLinJarodZuniga {
                                                         for (SeresVivos p : primates) {
                                                             System.out.println("Posicion " + primates.indexOf(p) + " " + p);
                                                         }
+                                                        for (int i = 0; i < cant_prim; i++) {
+                                                            System.out.println("Ingrese la posicion del primate: ");
+                                                            int pos = sc.nextInt();
+
+                                                            nave.get(cont_nave).getPrimates().add(primates.get(pos));
+                                                            primates.remove(pos);
+                                                        }
                                                         System.out.println("Ingrese que tipo de combustible tiene: 1. Quimico Solido 2. Propelente Liquido");
                                                         String tipogas = sc.next();
                                                         System.out.println("Ingrese el planeta de partida: ");
@@ -240,6 +261,13 @@ public class Lab4_FelipeLinJarodZuniga {
                                                         int cant_prim = sc.nextInt();
                                                         for (SeresVivos p : primates) {
                                                             System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                                        }
+                                                        for (int i = 0; i < cant_prim; i++) {
+                                                            System.out.println("Ingrese la posicion del primate: ");
+                                                            int pos = sc.nextInt();
+
+                                                            cohete.get(cont_cohete).getPrimates().add(primates.get(pos));
+                                                            primates.remove(pos);
                                                         }
                                                         System.out.println("Ingrese que tipo de combustible tiene: 1. Quimico Solido 2. Propelente Liquido");
                                                         String tipogas = sc.next();
@@ -273,11 +301,11 @@ public class Lab4_FelipeLinJarodZuniga {
                                 break;
                             }
                             case 2: {
-                                // Eliminar
+                                // modificar
                                 break;
                             }
                             case 3: {
-                                // Modificar
+                                // eliminar
                                 break;
                             }
                             default:
