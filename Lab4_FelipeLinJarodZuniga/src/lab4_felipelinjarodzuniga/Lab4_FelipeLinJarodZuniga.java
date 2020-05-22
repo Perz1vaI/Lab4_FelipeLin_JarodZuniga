@@ -14,6 +14,7 @@ public class Lab4_FelipeLinJarodZuniga {
          menu= sc.nextInt();
             switch (menu){
                 case 1:
+                    int v=0;
                     System.out.println("Ingresar ");
                     System.out.println("");
                     System.out.println("Ingeniero ingrese su usuario");
@@ -24,13 +25,19 @@ public class Lab4_FelipeLinJarodZuniga {
                          if (us.equals(inges.get(i).getUsuario())) {
                              if (ps.equals(inges.get(i).getContra())) {
                                  System.out.println("Bienvenido ingniero "+ us+ " ");
+                                 v=1;
                                  break;
                              }else{
                                  System.out.println("Contraseña Incorrecta");
+                                 v=0;
                              }
                     }else{
                              System.out.println("Uuario no existente porfavor registrese");
+                             v=0;
                          }
+                    }
+                    if (v==1) {
+                        System.out.println("Pipe podes trabajar todo aqui");
                     }
                    
                     break;
