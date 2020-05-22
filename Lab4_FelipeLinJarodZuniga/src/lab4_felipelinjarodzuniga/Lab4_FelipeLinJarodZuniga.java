@@ -43,7 +43,7 @@ public class Lab4_FelipeLinJarodZuniga {
                         }
                     }
                     if (v == 1) {
-                        System.out.println("1. Crear \n2. Modificar\n3. Eliminar");
+                        System.out.println("1. Crear \n2. Modificar\n3. Eliminar \n4. Hacer un viaje");
                         int menu2 = sc.nextInt();
                         switch (menu2) {
                             case 1: {
@@ -306,6 +306,78 @@ public class Lab4_FelipeLinJarodZuniga {
                             }
                             case 3: {
                                 // eliminar
+                                System.out.println("1. Eliminar Mono \n2. Eliminar Gorila \n3. Eliminar Helicoptero \n4. Eliminar Avion \n5. Eliminar Nave Espacial \n6. Eliminar Cohete");
+                                int menu_eliminar = sc.nextInt();
+                                switch (menu_eliminar) {
+                                    case 1: {
+                                        for (SeresVivos p : primates) {
+                                            if (p instanceof Mono) {
+                                                System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                            }
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        primates.remove(pos);
+                                        break;
+                                    }
+                                    case 2: {
+                                        for (SeresVivos p : primates) {
+                                            if (p instanceof Gorilla) {
+                                                System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                            }
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        primates.remove(pos);
+                                        break;
+                                    }
+                                    case 3: {
+                                        for (Transporte h : helicoptero) {
+                                            System.out.println("Posicion " + helicoptero.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        helicoptero.remove(pos);
+
+                                        break;
+                                    }
+                                    case 4: {
+                                        for (Transporte h : avion) {
+                                            System.out.println("Posicion " + avion.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        helicoptero.remove(pos);
+                                        break;
+                                    }
+                                    case 5: {
+                                        for (Transporte h : nave) {
+                                            System.out.println("Posicion " + nave.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        helicoptero.remove(pos);
+                                        break;
+                                    }
+                                    case 6: {
+                                        for (Transporte h : cohete) {
+                                            System.out.println("Posicion " + cohete.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere borrar: ");
+                                        int pos = sc.nextInt();
+
+                                        helicoptero.remove(pos);
+                                        break;
+                                    }
+
+                                    default:
+                                        System.out.println("No existe esa opcion!");
+                                }
                                 break;
                             }
                             default:
