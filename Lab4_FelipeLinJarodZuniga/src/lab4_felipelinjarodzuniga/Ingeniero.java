@@ -20,7 +20,7 @@ public class Ingeniero extends SeresVivos {
         this.fechaN = fechaN;
     }
 
-    public Ingeniero(String correo, String usuario, String contra, String fechaN, String nombre, String grupoS, String sexo, int altura, int peso) {
+    public Ingeniero(String correo, String usuario, String contra, String fechaN, String nombre, String grupoS, String sexo, double altura, double peso) {
         super(nombre, grupoS, sexo, altura, peso);
         this.correo = correo;
         this.usuario = usuario;
