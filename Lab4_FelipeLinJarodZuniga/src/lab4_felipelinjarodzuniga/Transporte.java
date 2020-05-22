@@ -15,7 +15,7 @@ public class Transporte {
     protected int cant_conm;
     protected double dis_tan;
     protected double altitud;
-    protected ArrayList primates;
+    protected ArrayList<Primates> primates;
 
     public Transporte() {
     }
@@ -51,11 +51,11 @@ public class Transporte {
         this.altitud = altitud;
     }
 
-    public ArrayList getPrimates() {
+    public ArrayList<Primates> getPrimates() {
         return primates;
     }
 
-    public void setPrimates(ArrayList primates) {
+    public void setPrimates(ArrayList<Primates> primates) {
         this.primates = primates;
     }
 
