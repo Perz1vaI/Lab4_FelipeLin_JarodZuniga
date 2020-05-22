@@ -17,6 +17,13 @@ public class Nave_Espacial extends Espacial{
     public Nave_Espacial() {
     }
 
+    public Nave_Espacial(int propul, String tipo_combbust, String plan_part, String plan_lleg, int cant_conm, double dis_tan, double altitud) {
+        super(tipo_combbust, plan_part, plan_lleg, cant_conm, dis_tan, altitud);
+        this.propul = propul;
+    }
+    
+    
+
     public int getPropul() {
         return propul;
     }

@@ -11,11 +11,18 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Comercial extends Aero_normal{
+public class Comercial extends Aero_normal {
+
     protected int num_pas;
     protected boolean piloto_aut;
 
     public Comercial() {
+    }
+
+    public Comercial(int num_pas, boolean piloto_aut, String tipogas, String destino, String partida, int cant_conm, double dis_tan, double altitud) {
+        super(tipogas, destino, partida, cant_conm, dis_tan, altitud);
+        this.num_pas = num_pas;
+        this.piloto_aut = piloto_aut;
     }
 
     public Comercial(int num_pas, boolean piloto_aut) {
@@ -99,6 +106,5 @@ public class Comercial extends Aero_normal{
     public String toString() {
         return "Comercial{" + "num_pas=" + num_pas + ", piloto_aut=" + piloto_aut + '}';
     }
-    
-    
+
 }

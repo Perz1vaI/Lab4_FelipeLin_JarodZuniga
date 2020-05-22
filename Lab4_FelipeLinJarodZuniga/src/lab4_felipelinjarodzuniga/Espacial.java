@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Espacial extends Transporte{
+public class Espacial extends Transporte {
+
     protected String tipo_combbust;
     protected String plan_part;
     protected String plan_lleg;
@@ -19,15 +20,8 @@ public class Espacial extends Transporte{
     public Espacial() {
     }
 
-    
-    public Espacial(String tipo_combbust, String plan_part, String plan_lleg) {
-        this.tipo_combbust = tipo_combbust;
-        this.plan_part = plan_part;
-        this.plan_lleg = plan_lleg;
-    }
-
-    public Espacial(String tipo_combbust, String plan_part, String plan_lleg, int cant_conm, double dis_tan, double altitud, ArrayList primates) {
-        super(cant_conm, dis_tan, altitud, primates);
+    public Espacial(String tipo_combbust, String plan_part, String plan_lleg, int cant_conm, double dis_tan, double altitud) {
+        super(cant_conm, dis_tan, altitud);
         this.tipo_combbust = tipo_combbust;
         this.plan_part = plan_part;
         this.plan_lleg = plan_lleg;
@@ -93,6 +87,5 @@ public class Espacial extends Transporte{
     public String toString() {
         return "Espacial{" + "tipo_combbust=" + tipo_combbust + ", plan_part=" + plan_part + ", plan_lleg=" + plan_lleg + '}';
     }
-    
-    
+
 }

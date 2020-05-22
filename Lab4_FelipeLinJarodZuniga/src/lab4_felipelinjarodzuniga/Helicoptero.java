@@ -11,21 +11,16 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Helicoptero extends Aero_normal{
+public class Helicoptero extends Aero_normal {
+
     protected int helices;
     protected int patas;
 
     public Helicoptero() {
     }
 
-    public Helicoptero(int helices, int patas, String tipogas, String destino, String partida) {
-        super(tipogas, destino, partida);
-        this.helices = helices;
-        this.patas = patas;
-    }
-
-    public Helicoptero(int helices, int patas, String tipogas, String destino, String partida, int cant_conm, double dis_tan, double altitud, ArrayList primates) {
-        super(tipogas, destino, partida, cant_conm, dis_tan, altitud, primates);
+    public Helicoptero(int helices, int patas, String tipogas, String destino, String partida, int cant_conm, double dis_tan, double altitud) {
+        super(tipogas, destino, partida, cant_conm, dis_tan, altitud);
         this.helices = helices;
         this.patas = patas;
     }
@@ -111,6 +106,5 @@ public class Helicoptero extends Aero_normal{
     public String toString() {
         return "Helicoptero{" + "helices=" + helices + ", patas=" + patas + '}';
     }
-    
-    
+
 }

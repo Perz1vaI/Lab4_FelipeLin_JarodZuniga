@@ -11,10 +11,16 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Cohete extends Espacial{
+public class Cohete extends Espacial {
+
     protected int separaciones;
 
     public Cohete() {
+    }
+
+    public Cohete(int separaciones, String tipo_combbust, String plan_part, String plan_lleg, int cant_conm, double dis_tan, double altitud) {
+        super(tipo_combbust, plan_part, plan_lleg, cant_conm, dis_tan, altitud);
+        this.separaciones = separaciones;
     }
 
     public int getSeparaciones() {
@@ -85,5 +91,5 @@ public class Cohete extends Espacial{
     public String toString() {
         return "Cohete{" + "separaciones=" + separaciones + '}';
     }
-    
+
 }

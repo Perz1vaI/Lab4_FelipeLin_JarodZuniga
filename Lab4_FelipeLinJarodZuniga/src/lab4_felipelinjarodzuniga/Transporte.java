@@ -12,19 +12,19 @@ import java.util.ArrayList;
  * @author Jhon Zuniga
  */
 public class Transporte {
+
     protected int cant_conm;
     protected double dis_tan;
     protected double altitud;
-    protected ArrayList<Primates> primates;
+    protected ArrayList<SeresVivos> primates = new ArrayList();
 
     public Transporte() {
     }
 
-    public Transporte(int cant_conm, double dis_tan, double altitud, ArrayList primates) {
+    public Transporte(int cant_conm, double dis_tan, double altitud) {
         this.cant_conm = cant_conm;
         this.dis_tan = dis_tan;
         this.altitud = altitud;
-        this.primates = primates;
     }
 
     public int getCant_conm() {
@@ -51,11 +51,11 @@ public class Transporte {
         this.altitud = altitud;
     }
 
-    public ArrayList<Primates> getPrimates() {
+    public ArrayList<SeresVivos> getPrimates() {
         return primates;
     }
 
-    public void setPrimates(ArrayList<Primates> primates) {
+    public void setPrimates(ArrayList<SeresVivos> primates) {
         this.primates = primates;
     }
 
@@ -63,6 +63,5 @@ public class Transporte {
     public String toString() {
         return "Transporte{" + "cant_conm=" + cant_conm + ", dis_tan=" + dis_tan + ", altitud=" + altitud + ", primates=" + primates + '}';
     }
-    
-    
+
 }

@@ -11,25 +11,20 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Aero_normal extends Transporte{
+public class Aero_normal extends Transporte {
+
     protected String tipogas;
     protected String destino;
     protected String partida;
 
-    public Aero_normal(String tipogas, String destino, String partida) {
-        this.tipogas = tipogas;
-        this.destino = destino;
-        this.partida = partida;
-    }
-
-    public Aero_normal(String tipogas, String destino, String partida, int cant_conm, double dis_tan, double altitud, ArrayList primates) {
-        super(cant_conm, dis_tan, altitud, primates);
-        this.tipogas = tipogas;
-        this.destino = destino;
-        this.partida = partida;
-    }
-
     public Aero_normal() {
+    }
+
+    public Aero_normal(String tipogas, String destino, String partida, int cant_conm, double dis_tan, double altitud) {
+        super(cant_conm, dis_tan, altitud);
+        this.tipogas = tipogas;
+        this.destino = destino;
+        this.partida = partida;
     }
 
     public String getTipogas() {
@@ -92,6 +87,5 @@ public class Aero_normal extends Transporte{
     public String toString() {
         return "Aero_normal{" + "tipogas=" + tipogas + ", destino=" + destino + ", partida=" + partida + '}';
     }
-    
-    
+
 }
