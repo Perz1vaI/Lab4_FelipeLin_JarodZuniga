@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Nave_Espacial extends Espacial{
+public class Nave_Espacial extends Espacial implements Calculos {
+
     protected int propul;
 
     public Nave_Espacial() {
@@ -21,8 +22,6 @@ public class Nave_Espacial extends Espacial{
         super(tipo_combbust, plan_part, plan_lleg, cant_conm, dis_tan, altitud);
         this.propul = propul;
     }
-    
-    
 
     public int getPropul() {
         return propul;
@@ -92,7 +91,15 @@ public class Nave_Espacial extends Espacial{
     public String toString() {
         return "Nave_Espacial{" + "propul=" + propul + '}';
     }
-    
-  
-    
+
+    @Override
+    public int Comida(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        return cant_conm - distancia;
+    }
+
 }

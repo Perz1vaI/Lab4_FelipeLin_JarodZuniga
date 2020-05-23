@@ -1,6 +1,6 @@
 package lab4_felipelinjarodzuniga;
 
-public class Gorilla extends Primates {
+public class Gorilla extends Primates implements Calculos {
 
     private int IQ;
 
@@ -37,7 +37,15 @@ public class Gorilla extends Primates {
     public String toString() {
         return "Gorilla{" + "IQ=" + IQ + '}';
     }
-    
-    
+
+    @Override
+    public int Comida(int distancia) {
+        return comida - km_comida*distancia;
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

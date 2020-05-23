@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Comercial extends Aero_normal {
+public class Comercial extends Aero_normal implements Calculos {
 
     protected int num_pas;
     protected boolean piloto_aut;
@@ -105,6 +105,16 @@ public class Comercial extends Aero_normal {
     @Override
     public String toString() {
         return "Comercial{" + "num_pas=" + num_pas + ", piloto_aut=" + piloto_aut + '}';
+    }
+
+    @Override
+    public int Comida(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        return cant_conm - distancia;
     }
 
 }

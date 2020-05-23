@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Helicoptero extends Aero_normal {
+public class Helicoptero extends Aero_normal implements Calculos {
 
     protected int helices;
     protected int patas;
@@ -105,6 +105,16 @@ public class Helicoptero extends Aero_normal {
     @Override
     public String toString() {
         return "Helicoptero{" + "helices=" + helices + ", patas=" + patas + '}';
+    }
+
+    @Override
+    public int Comida(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        return cant_conm - distancia;
     }
 
 }

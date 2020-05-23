@@ -1,6 +1,6 @@
 package lab4_felipelinjarodzuniga;
 
-public class Mono extends Primates {
+public class Mono extends Primates implements Calculos {
 
     private String color_pelo;
 
@@ -32,6 +32,16 @@ public class Mono extends Primates {
     @Override
     public String toString() {
         return "Mono{" + "color_pelo=" + color_pelo + '}';
+    }
+
+    @Override
+    public int Comida(int distancia) {
+        return comida - km_comida * distancia;
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Jhon Zuniga
  */
-public class Cohete extends Espacial {
+public class Cohete extends Espacial implements Calculos {
 
     protected int separaciones;
 
@@ -90,6 +90,16 @@ public class Cohete extends Espacial {
     @Override
     public String toString() {
         return "Cohete{" + "separaciones=" + separaciones + '}';
+    }
+
+    @Override
+    public int Comida(int distancia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int Combustible(int distancia) {
+        return cant_conm - distancia;
     }
 
 }

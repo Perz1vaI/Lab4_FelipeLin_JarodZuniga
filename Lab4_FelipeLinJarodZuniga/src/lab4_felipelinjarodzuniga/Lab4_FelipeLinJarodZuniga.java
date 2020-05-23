@@ -621,6 +621,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                 }
                                 break;
                             }
+                            case 4: {
+
+                                break;
+                            }
                             default:
                                 System.out.println("No existe esa opcion!");
                         }
