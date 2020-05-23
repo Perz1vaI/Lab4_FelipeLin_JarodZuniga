@@ -315,6 +315,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion del mono que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>primates.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         name = primates.get(pos).getNombre();
                                         System.out.println("Ingrese su nuevo grupo sanguineo: ");
                                         String grupoS = sc.next();
@@ -348,6 +352,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion del primate que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>primates.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         name = primates.get(pos).getNombre();
                                         System.out.println("Ingrese su grupo sanguineo: ");
                                         String grupoS = sc.next();
@@ -380,6 +388,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion del helicomptero que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>helicoptero.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         System.out.println("Ingrese la cantidad de combustible: ");
                                         int cant_conm = sc.nextInt();
                                         System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
@@ -420,6 +432,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion del avion que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>avion.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         System.out.println("Ingrese la cantidad de combustible: ");
                                         int cant_conm = sc.nextInt();
                                         System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
@@ -467,6 +483,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion de la nave que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>nave.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         System.out.println("Ingrese la cantidad de combustible: ");
                                         int cant_conm = sc.nextInt();
                                         System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
@@ -506,6 +526,10 @@ public class Lab4_FelipeLinJarodZuniga {
                                         }
                                         System.out.println("Ingrese la posicion del cohete que quiere modificar: ");
                                         int pos = sc.nextInt();
+                                        while (pos>cohete.size()) {                                            
+                                            System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                            pos = sc.nextInt();
+                                        }
                                         System.out.println("Ingrese la cantidad de combustible: ");
                                         int cant_conm = sc.nextInt();
                                         System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
