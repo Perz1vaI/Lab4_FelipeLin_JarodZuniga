@@ -302,6 +302,247 @@ public class Lab4_FelipeLinJarodZuniga {
                             }
                             case 2: {
                                 // modificar
+                                System.out.println("Modificar ");
+                                System.out.println("1. Modificar Mono \n2. Modificar Gorila \n3. Modificar Helicoptero \n4. Modificar Avion \n5. Modificar Nave Espacial \n6. Modificar Cohete");
+                                int menu_modificar = sc.nextInt();
+                                switch (menu_modificar) {
+                                    case 1: {
+                                        String name;
+                                        for (SeresVivos p : primates) {
+                                            if (p instanceof Mono) {
+                                                System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                            }
+                                        }
+                                        System.out.println("Ingrese la posicion del mono que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        name = primates.get(pos).getNombre();
+                                        System.out.println("Ingrese su nuevo grupo sanguineo: ");
+                                        String grupoS = sc.next();
+                                        System.out.println("Ingrese el nuevo sexo: ");
+                                        String sexo = sc.next();
+                                        System.out.println("Ingrese la nuevo altura: ");
+                                        int altura = sc.nextInt();
+                                        System.out.println("Ingrese el nuevo peso: ");
+                                        int peso = sc.nextInt();
+                                        System.out.println("Ingrese la nueva cantidad de comida: ");
+                                        int comida = sc.nextInt();
+                                        System.out.println("Ingrese cuanta comida come por kilometro: ");
+                                        int km_comida = sc.nextInt();
+                                        System.out.println("Ingrese su nuevo planeta asignado: ");
+                                        String planeta = sc.next();
+                                        System.out.println("Ingrese su nuevo lugar de nacimiento: ");
+                                        String LugarN = sc.next();
+                                        System.out.println("Ingrese el nuevo color de su pelo: ");
+                                        String color = sc.next();
+
+                                        primates.add(new Mono(color, comida, km_comida, planeta, LugarN, name, grupoS, sexo, altura, peso));
+                                        primates.remove(pos);
+                                        break;
+                                    }
+                                    case 2: {
+                                        String name;
+                                        for (SeresVivos p : primates) {
+                                            if (p instanceof Gorilla) {
+                                                System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                            }
+                                        }
+                                        System.out.println("Ingrese la posicion del primate que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        name = primates.get(pos).getNombre();
+                                        System.out.println("Ingrese su grupo sanguineo: ");
+                                        String grupoS = sc.next();
+                                        System.out.println("Ingrese el sexo: ");
+                                        String sexo = sc.next();
+                                        System.out.println("Ingrese la altura: ");
+                                        int altura = sc.nextInt();
+                                        System.out.println("Ingrese el peso: ");
+                                        int peso = sc.nextInt();
+                                        System.out.println("Ingrese la cantidad de comida: ");
+                                        int comida = sc.nextInt();
+                                        System.out.println("Ingrese cuanta comida come por kilometro: ");
+                                        int km_comida = sc.nextInt();
+                                        System.out.println("Ingrese su planeta asignado: ");
+                                        String planeta = sc.next();
+                                        System.out.println("Ingrese su lugar de nacimiento: ");
+                                        String LugarN = sc.next();
+                                        System.out.println("Ingrese el IQ (130-139): ");
+                                        int IQ = sc.nextInt();
+
+                                        primates.add(new Gorilla(IQ, comida, km_comida, planeta, LugarN, name, grupoS, sexo, altura, peso));
+
+                                        primates.remove(pos);
+                                        break;
+                                    }
+                                    case 3: {
+                                        String name;
+                                        for (Transporte h : helicoptero) {
+                                            System.out.println("Posicion " + helicoptero.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del helicomptero que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        System.out.println("Ingrese la cantidad de combustible: ");
+                                        int cant_conm = sc.nextInt();
+                                        System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
+                                        double dis_tan = sc.nextInt();
+                                        System.out.println("Ingrese la altitud: ");
+                                        double altitud = sc.nextInt();
+                                        System.out.println("Ingrese cuantos primates va tener: ");
+                                        int cant_prim = sc.nextInt();
+                                        for (SeresVivos p : primates) {
+                                            System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                        }
+                                        for (int i = 0; i < cant_prim; i++) {
+                                            System.out.println("Ingrese la posicion del primate: ");
+                                            int posa = sc.nextInt();
+
+                                            helicoptero.get(cont_heli).getPrimates().add(primates.get(posa));
+                                            primates.remove(posa);
+                                        }
+                                        System.out.println("Ingrese que tipo de Gasolina tiene: 1. Super 2. Regular 3. diesel");
+                                        String tipogas = sc.next();
+                                        System.out.println("Ingrese el pais de partida: ");
+                                        String partida = sc.next();
+                                        System.out.println("Ingrese el pais de llegada: ");
+                                        String destino = sc.next();
+                                        System.out.println("Ingrese el numero de helices: ");
+                                        int helices = sc.nextInt();
+                                        System.out.println("Ingrese el numero de patas");
+                                        int patas = sc.nextInt();
+                                        helicoptero.add(new Helicoptero(helices, patas, tipogas, destino, partida, cant_conm, dis_tan, altitud));
+                                        helicoptero.remove(pos);
+
+                                        break;
+                                    }
+                                    case 4: {
+                                        String name;
+                                        for (Transporte h : avion) {
+                                            System.out.println("Posicion " + avion.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del avion que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        System.out.println("Ingrese la cantidad de combustible: ");
+                                        int cant_conm = sc.nextInt();
+                                        System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
+                                        double dis_tan = sc.nextInt();
+                                        System.out.println("Ingrese la altitud: ");
+                                        double altitud = sc.nextInt();
+                                        System.out.println("Ingrese cuantos primates va tener: ");
+                                        int cant_prim = sc.nextInt();
+                                        for (SeresVivos p : primates) {
+                                            System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                        }
+                                        for (int i = 0; i < cant_prim; i++) {
+                                            System.out.println("Ingrese la posicion del primate: ");
+                                            int posa = sc.nextInt();
+
+                                            avion.get(cont_avion).getPrimates().add(primates.get(posa));
+                                            primates.remove(posa);
+                                        }
+                                        System.out.println("Ingrese que tipo de Gasolina tiene: 1. Super 2. Regular 3. diesel");
+                                        String tipogas = sc.next();
+                                        System.out.println("Ingrese el pais de partida: ");
+                                        String partida = sc.next();
+                                        System.out.println("Ingrese el pais de llegada: ");
+                                        String destino = sc.next();
+                                        System.out.println("Ingrese el numero de pasajeros: ");
+                                        int num_pas = sc.nextInt();
+                                        System.out.println("Funciona el piloto automatica 1. si 2. no");
+                                        String piloto_auto = sc.next();
+                                        boolean auto = false;
+
+                                        if (piloto_auto.equals("1")) {
+                                            auto = true;
+                                        } else if (piloto_auto.equals("2")) {
+                                            auto = false;
+                                        }
+
+                                        avion.add(new Comercial(num_pas, auto, tipogas, destino, partida, cant_conm, dis_tan, altitud));
+                                        avion.remove(pos);
+                                        break;
+                                    }
+                                    case 5: {
+                                        String name;
+                                        for (Transporte h : nave) {
+                                            System.out.println("Posicion " + nave.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion de la nave que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        System.out.println("Ingrese la cantidad de combustible: ");
+                                        int cant_conm = sc.nextInt();
+                                        System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
+                                        double dis_tan = sc.nextInt();
+                                        System.out.println("Ingrese la altitud: ");
+                                        double altitud = sc.nextInt();
+                                        System.out.println("Ingrese cuantos primates va tener: ");
+                                        int cant_prim = sc.nextInt();
+                                        for (SeresVivos p : primates) {
+                                            System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                        }
+                                        for (int i = 0; i < cant_prim; i++) {
+                                            System.out.println("Ingrese la posicion del primate: ");
+                                            int posa = sc.nextInt();
+
+                                            nave.get(cont_nave).getPrimates().add(primates.get(posa));
+                                            primates.remove(posa);
+                                        }
+                                        System.out.println("Ingrese que tipo de combustible tiene: 1. Quimico Solido 2. Propelente Liquido");
+                                        String tipogas = sc.next();
+                                        System.out.println("Ingrese el planeta de partida: ");
+                                        String partida = sc.next();
+                                        System.out.println("Ingrese el planeta de llegada: ");
+                                        String destino = sc.next();
+                                        System.out.println("Ingrese el numero de propulsores: ");
+                                        int propul = sc.nextInt();
+
+                                        nave.add(new Nave_Espacial(propul, tipogas, partida, destino, cant_conm, dis_tan, altitud));
+
+                                        nave.remove(pos);
+                                        break;
+                                    }
+                                    case 6: {
+                                        String name;
+                                        for (Transporte h : cohete) {
+                                            System.out.println("Posicion " + cohete.indexOf(h) + " " + h);
+                                        }
+                                        System.out.println("Ingrese la posicion del cohete que quiere modificar: ");
+                                        int pos = sc.nextInt();
+                                        System.out.println("Ingrese la cantidad de combustible: ");
+                                        int cant_conm = sc.nextInt();
+                                        System.out.println("Ingrese la distancia que puede recorrer con el tanque lleno");
+                                        double dis_tan = sc.nextInt();
+                                        System.out.println("Ingrese la altitud: ");
+                                        double altitud = sc.nextInt();
+                                        System.out.println("Ingrese cuantos primates va tener: ");
+                                        int cant_prim = sc.nextInt();
+                                        for (SeresVivos p : primates) {
+                                            System.out.println("Posicion " + primates.indexOf(p) + " " + p);
+                                        }
+                                        for (int i = 0; i < cant_prim; i++) {
+                                            System.out.println("Ingrese la posicion del primate: ");
+                                            int posa = sc.nextInt();
+
+                                            cohete.get(cont_cohete).getPrimates().add(primates.get(posa));
+                                            primates.remove(posa);
+                                        }
+                                        System.out.println("Ingrese que tipo de combustible tiene: 1. Quimico Solido 2. Propelente Liquido");
+                                        String tipogas = sc.next();
+                                        System.out.println("Ingrese el planeta de partida: ");
+                                        String partida = sc.next();
+                                        System.out.println("Ingrese el planeta de llegada: ");
+                                        String destino = sc.next();
+                                        System.out.println("Ingrese el numero de separaciones: ");
+                                        int separaciones = sc.nextInt();
+
+                                        cohete.add(new Cohete(separaciones, tipogas, partida, destino, cant_conm, dis_tan, altitud));
+
+                                        cohete.remove(pos);
+                                        break;
+                                    }
+
+                                    default:
+                                        System.out.println("No existe esa opcion!");
+                                }
+
                                 break;
                             }
                             case 3: {
